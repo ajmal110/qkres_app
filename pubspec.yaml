@@ -17,7 +17,9 @@ dependencies:
   firebase_core: ^0.3.4
   firebase_auth: ^0.8.4+4
   cloud_firestore: ^0.9.13+1
-  eva_icons_flutter: ^2.0.1
+
+  flutter_vector_icons: ^0.2.1
+
 #  firebase_auth_platform_interface: ^2.0.1
 
 dev_dependencies:
@@ -35,3 +37,12 @@ flutter:
       fonts:
         - asset: fonts/Montserrat-Regular.ttf
         - asset: fonts/Montserrat-SemiBold.ttf
+        - asset: fonts/Montserrat-Medium.ttf
+    - family: Economica
+      fonts:
+        - asset: fonts/Economica-Regular.ttf
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans-Regular.ttf
+        - asset: fonts/OpenSans-Bold.ttf
+        - asset: fonts/OpenSans-Light.ttf
