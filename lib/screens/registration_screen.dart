@@ -1,9 +1,14 @@
+library firebase_auth_platform_interface;
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qkres_app/components/rounded_button.dart';
 import 'package:qkres_app/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:qkres_app/screens/home_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+
 
 class RegistrationScreen extends StatefulWidget {
   static String id = 'registration_screen';
@@ -78,29 +83,6 @@ class _RegistrationScreenState extends State<RegistrationScreen> with SingleTick
                   ],
                 ),
               ),
-//              Row(
-//                children: <Widget>[
-//                  Container(
-//                    child: Image.asset('images/Qres.logo.png'),
-//                    height: 75.0,
-//                  ),
-//                  Flexible(
-//                    child: Center(
-//                      child: Text(
-//                        'QkRes ',
-//                        textAlign: TextAlign.center,
-//                        softWrap: true,
-//                        style: TextStyle(
-//                          letterSpacing: 1.2,
-//                          color: Colors.grey[800],
-//                          fontFamily: 'Montserrat',
-//                          fontSize: 65.0,
-//                        ),
-//                      ),
-//                    ),
-//                  ),
-//                ],
-//              ),
 
               SizedBox(
                 height: 48.0,
