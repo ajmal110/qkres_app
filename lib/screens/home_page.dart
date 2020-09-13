@@ -7,6 +7,7 @@ import 'package:firebase_core/firebase_core.dart';
 
 
 
+
 class HomeScreen extends StatefulWidget {
   static String id = 'home_page';
   @override
@@ -37,6 +38,28 @@ class _HomeScreenState extends State<HomeScreen> {
   }
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('HOME'),
+        backgroundColor: Colors.grey[400],
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.close), onPressed: (){
+            _auth.signOut();
+            Navigator.pop(context);
+          })
+        ],
+
+      ),
+      body: Stack(
+    children: <Widget>[
+    Center(
+        child: Container(
+        decoration: BoxDecoration(
+        gradient: LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [Colors.grey[300], Colors.white])),)),
+])
+    );
   }
 }

@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:qkres_app/components/rounded_button.dart';
 import 'package:qkres_app/constants.dart';
+import 'package:qkres_app/screens/home_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class LoginScreen extends StatefulWidget {
   static String id = 'login_screen';
@@ -24,6 +26,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
       print(controller.value);
     });
   }
+  final _auth = FirebaseAuth.instance;
   String email;
   String password;
   @override
@@ -109,8 +112,18 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
               SizedBox(
                 height: 24.0,
               ),
-    RoundedButton(title: 'Log in', colour: Colors.deepOrangeAccent, onPressed: () {
-    Navigator.pushNamed(context, LoginScreen.id);})
+    RoundedButton(title: 'Log in', colour: Colors.deepOrangeAccent, onPressed: ()  async {
+    try{
+    final newUser = await _auth.signInWithEmailAndPassword(email: email, password: password);
+    if (newUser !=null)
+    {
+    Navigator.pushNamed(context, HomeScreen.id);
+    }
+    }
+    catch(e){
+      print(e);
+    }
+    })
             ],
           ),
         ),

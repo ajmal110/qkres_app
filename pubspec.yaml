@@ -17,6 +17,7 @@ dependencies:
   firebase_core: ^0.3.4
   firebase_auth: ^0.8.4+4
   cloud_firestore: ^0.9.13+1
+  eva_icons_flutter: ^2.0.1
 #  firebase_auth_platform_interface: ^2.0.1
 
 dev_dependencies:
