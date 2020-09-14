@@ -56,7 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
       gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [Colors.grey[200], Colors.white])),)),
+          colors: [Color(0xFFE7F0C3), Colors.white])),)),
 
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -79,7 +79,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                   height: 20.0,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 60.0),
+                  padding: const EdgeInsets.only(left: 75.0),
                   child: Row(
                     children: <Widget>[
                       Hero(
@@ -92,11 +92,11 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
+                        padding: const EdgeInsets.only(left: 3.0),
                         child: Hero(
                           tag:'title',
                           child: Text(
-                            'QkRes',
+                            'kRes',
                             textAlign: TextAlign.left,
 
                             style: TextStyle(
@@ -163,26 +163,4 @@ class _WelcomeScreenState extends State<WelcomeScreen> with TickerProviderStateM
   }
 }
 
-
-
-
-
-
-
-//Center(
-//child: Container(
-//decoration: BoxDecoration(
-//gradient: LinearGradient(
-//begin: Alignment.topRight,
-//end: Alignment.bottomLeft,
-//colors: [Color(0xFFF7C840), Color(0xFFF12315)])),)),
-
-
-
-//child: Container(
-//decoration: BoxDecoration(
-//gradient: LinearGradient(
-//begin: Alignment.topRight,
-//end: Alignment.bottomLeft,
-//colors: [Colors.deepPurple[300], Colors.deepPurple[800]])),)),
 
